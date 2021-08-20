@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <a href="home.html"><img src="ac39394a-3b7f-41fe-b301-720c92ab7653_200x200.png"></a>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+        <link href="https://api.mapbox.com/geocoding/v5/mapbox.places">
+        <script src=mapbox_marker.js></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css">
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="card_product.css">
+        <title>VIH/SIDA</title>
+    </head>
+    <body>
+        <h1>VIH/SIDA</h1>
+        <p>El VIH es un virus que destruye determinadas células del sistema inmunitario. Cuando el VIH daña el sistema inmunitario, es más fácil que uno se enferme de gravedad e incluso que muera a causa de infecciones que el cuerpo normalmente podría combatir.</p>
+        <p>El SIDA es la enfermedad causada por el daño que el VIH produce en el sistema inmunitario. Una persona tiene SIDA cuando contrae infecciones peligrosas o tiene un número extremadamente bajo de células CD4. El SIDA es la fase más grave de la infección por VIH y, con el tiempo, termina provocando la muerte. </p>
+        <p>Su tratamiento, generalmente toma 10 años para que alguien con VIH desarrolle SIDA. El tratamiento desacelera el daño que causa el virus y ayuda a que los infectados se mantegan durante varias décadas</p>
+        <h2>Causas</h2>
+        <p>El VIH es transportado por el semen, las secreciones vaginales, la sangre y la leche materna. El virus ingresa en el cuerpo a través de cortes o heridas en la piel y a través de las membranas mucosas. Se puede contraer el VIH por:</p>
+        <ul>
+            <li>Tener sexo vaginal o anal</li>
+            <li>Compartir agujas o jeringas para drogarse, hacerse perforaciones en el cuerpo, tatuajes, etc.</li>
+            <li>Ser punzado con una aguja que tiene sangre infectada por VIH</li>
+            <li>tener heridas o ampollas abiertas que entran en contacto con la sangre, el semen o secreciones vaginales infectados con o por VIH</li>
+        </ul>
+        <h3>Prevención</h3>
+        <p>La forma más común de transmisión del VIH es el sexo sin protección. Uno puede protegerse y proteger a su pareja usando preservativos y/o barreras de látex bucales cada vez que tienen relaciones sexuales y evitando compartir agujas. Al tener VIH, recibir tratamiento puede disminuir e incluso detener las posibilidades de contagiar a otros con el virus. Al no tenerlo, también existe una medicina diaria, llamada PrEP que puede ayudar a protegerse del VIH.</p>
+        <p>Este virus también se puede transmitir al bebé durante el embarazo, el parto o al amamantar. Una embarazada con VIH puede tomar medicamentos que reducen considerablemente las posibilidades que su bebé se contagie.</p>
+        <br>
+        <p>En el siguiente mapa, puedes buscar y seleccionar, dependiendo de tu región un centro médico donde puedes recibir atención o información, e incluso, dependiendo también farmacias en caso de que tengas que acceder a fármacos.</p>
+        <div id='map' style='width: 1000px; height: 500px;'></div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoicmFtbmZvbm83MyIsImEiOiJjazcyNHp5dmEwOTFhM2t0ZHk2aHdlMWpuIn0.SV6D_zbGOdwLetxZi9NbdQ';
+            var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11'
+            });
+            
+            map.addControl(
+                new MapboxGeocoder({
+                accessToken: mapboxgl.accessToken,
+                mapboxgl: mapboxgl
+            })
+             );
+        </script>
+        <p>También puedes encontrar ciertos productos, sobretodo en farmacias o parafarmacias que puedan ayudar para protegerte del sida al tener relaciones sexuales.</p>
+        <div class="card-product">
+			<img src="reproductive-health-supplies-coalition-Wb-rLP27Gvo-unsplash.jpg">
+			<div class="card-product-infos">
+				<h2>Preservativos</h2>
+				<p>Previenen la entrada de semen y fluidos sanguíneos a diversos aparatos reporductores</p>
+				<p>10 NIS</p>
+			</div>
+		</div>
+		<br>
+		<div class="card-product">
+			<img src="reproductive-health-supplies-coalition-Is-oKcKl7d0-unsplash.jpg">
+			<div class="card-product-infos">
+				<h2>DIU</h2>
+				<p>Se coloca y se extrae en el útero para evitar embarazos</p>
+				<p>90 NIS</p>
+			</div>
+		</div>
+		<br>
+		<div class="card-product">
+			<img src="brett-jordan--eFPTYvfMxY-unsplash.jpg">
+			<div class="card-product-infos">
+				<h2>Píldoras anticonceptivas</h2>
+				<p>Medicamento que contiene hormonas y se utiliza como anticonceptivo para evitar embarazos</p>
+				<p>150 NIS</p>
+			</div>
+		</div>
+		<br>
+    </body>
+</html>

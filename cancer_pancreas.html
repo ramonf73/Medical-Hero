@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <a href="home.html"><img src="ac39394a-3b7f-41fe-b301-720c92ab7653_200x200.png"></a>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+        <link href="https://api.mapbox.com/geocoding/v5/mapbox.places">
+        <script src=mapbox_marker.js></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css">
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" href="style.css">
+        <title>Cáncer de páncreas</title>
+    </head>
+    <body>
+        <h1>Cáncer de páncreas</h1>
+        <p>El cáncer de páncreas es un tumor que se origina en la glándula pancreática</p>
+        <p>Es una de las neoplasis más agresivas debido a su pronta difusión, su falta de síntomas específicos tempranos y su diagnóstico tardío. En los últimos años, se han estudiado nuevas técnicas para ayudar a la detección precoz de cáncer de páncreas.</p>
+        <p>El cáncer de páncreas, si bien es el décimo tumor en frecuencia en los países industrializados, representa la cuarta causa de muerte por cáncer y se prevé que para 2030 incremente su incidencia en un 50%, convirtiéndose así en la segunda causa de muerte por cáncer y provocando más muertes que el cáncer de próstata, colon o mama.</p>
+        <h2>Causas o síntomas</h2>
+        <p>Cuando las personas tienen síntomas, estos son similares a los síntomas de otras afecciones médicas, como las úlceras o la pancreatitis. A medida que el cáncer crece, los síntomas pueden incluir: </p>
+        <ul>
+            <li>Color amarillo en la piel y los ojos, osurecimiento de la orina y heces del color de la arcilla</li>
+            <li>Dolor en la parte superior del abdomen o de la espalda</li>
+            <li>Sensación de ardor en el estómago u otras molestias gastroinstestinales</li>
+            <li>Distensión estomacal</li>
+            <li>Heces flotantes con olor fétido y color inusual</li>
+            <li>Debilidad</li>
+            <li>Pérdida de apetito</li>
+            <li>Náuseas y vómitos</li>
+            <li>Escalofríos</li>
+            <li>Fiebre</li>
+            <li>Pérdida de peso sin razón aparente</li>
+        </ul>
+        <h3>Prevención</h3>
+        <p>No existe una forma segura de prevenir el cáncer de páncreas. Algunos factores de riesgo, tales como la edad, género, raza y antecedente familiar no se pueden controlar. No obstante, existn medidas que pueden tomar para tratar de reducir su riesgo.</p>
+        <ul>
+            <li>No fumar</li>
+            <li>Alimentación, peso corporal y actividad física</li>
+            <li>Evitar el alcohol</li>
+        </ul>
+        <p>En el siguiente mapa puedes buscar y seleccionar un centro médico u hospital de cabecera para recibir información o atención médico.</p>
+        <div id='map' style='width: 1000px; height: 500px;'></div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoicmFtbmZvbm83MyIsImEiOiJjazcyNHp5dmEwOTFhM2t0ZHk2aHdlMWpuIn0.SV6D_zbGOdwLetxZi9NbdQ';
+            var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11'
+            });
+            
+            map.addControl(
+                new MapboxGeocoder({
+                accessToken: mapboxgl.accessToken,
+                mapboxgl: mapboxgl
+            })
+             );
+        </script>
+    </body>
+</html>

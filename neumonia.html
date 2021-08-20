@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <a href="home.html"><img src="ac39394a-3b7f-41fe-b301-720c92ab7653_200x200.png"></a>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+        <link href="https://api.mapbox.com/geocoding/v5/mapbox.places">
+        <script src=mapbox_marker.js></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css">
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" href="style.css">
+        <title>Neumonía</title>
+    </head>
+    <body>
+        <h1>Neumonía</h1>
+        <p>La neumonía o vulgarmente conocida como pulmonía es una enfermedad del sistema respiratiorio que consiste en la inflamación de los espacios alveolares de los pulmones. La neumonía, de forma general, es una infección aguda asociada a un nuevo infiltrado en la placa radiográfica del tórax. Muchos pacientes con neumonía son tratados por médicos de cabecera y no ingresan en hospitales y esta enfermedad puede ser grave si no se detecta a tiempo.</p>
+        <h2>Causas y síntomas</h2>
+        <p>Las causas pueden deberse a los siguientes factores:</p>
+        <ul>
+            <li>Hongos</li>
+            <li>Bacterias</li>
+            <li>Determindos virus</li>
+        </ul>
+        <p>También se suman diversos actos de origen humano como:</p>
+        <ul>
+            <li>Fumar</li>
+            <li>Encontarse entre personas con VIH/SIDA, las cuales suelen recibir tratamientos algo específicos tras haber contraído la enfermedad</li>
+            <li>Mantener un sistema inmunológico débil</li>
+            <li>Estar hospitalizado, dependiendo de cómo el sujeto tenga el sistema inmunológico</li>
+            <li>Tener la enfermedad de forma que sea crónica, lo cual puede llegar a manifestarse con el tiempo a mayor frecuencia</li>
+        </ul>
+        <p>Entre los síntomas podremos encontrar los siguientes:</p>
+        <ul>
+            <li>Dolor en el pecho al respiar o toser</li>
+            <li>Desorientación o cambios de percepción mental, normalmente se manifiesta en personas de tercera edad</li>
+            <li>Tos que puede producir flema </li>
+            <li>Fiebre</li>
+            <li>Fatiga</li>
+            <li>Dificultades respiratorias</li>
+        </ul>
+        <h3>Cómo prevenir</h3>
+        <p>Existen diversas formas de prevenir la neumonía, las cuales son las siguientes:</p>
+        <ul>
+            <li>Vacunarse, por lo existen vacunas contra la neumonía e incluso la gripe</li>
+            <li>Practicar la buena higiene, por lo que es casi frecuente lavarse las manos o utlizar un desifectante a base de alcohol</li>
+            <li>No fumar, como entendería cualquiera a la larga, fumar puede causar daños en defensas naturales que protegen a los pulmones de infecciones respiratiorias</li>
+            <li>Mantener fuerte el sistema inmunitario, para ello es mejor dormir lo suficiente, hacer ejercicio y llevar una dieta saludable</li>
+        </ul>
+        <p>En el siguiente mapa puedes buscar y seleccionar, dependiendo de tu país o región, un centro médico donde puedes recibir atención e información. También puedes seleccionar farmacias en caso de que quieras encontrar fármacos.
+        </p>
+        <div id='map' style='width: 1000px; height: 500px;'></div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoicmFtbmZvbm83MyIsImEiOiJjazcyNHp5dmEwOTFhM2t0ZHk2aHdlMWpuIn0.SV6D_zbGOdwLetxZi9NbdQ';
+            var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11'
+            });
+            
+            map.addControl(
+                new MapboxGeocoder({
+                accessToken: mapboxgl.accessToken,
+                mapboxgl: mapboxgl
+            })
+             );
+        </script>
+    </body>
+</html>

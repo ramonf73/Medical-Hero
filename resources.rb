@@ -1,0 +1,1 @@
+resources :sessions, only: [:new, :create, :destroy]

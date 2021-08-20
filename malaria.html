@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <a href="home.html"><img src="ac39394a-3b7f-41fe-b301-720c92ab7653_200x200.png"></a>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+        <link href="https://api.mapbox.com/geocoding/v5/mapbox.places">
+        <script src=mapbox_marker.js></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css">
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" href="style.css">
+        <title>Malaria</title>
+    </head>
+    <body>
+        <h1>Malaria</h1>
+        <p>La malaria o también conocida como paludismo es una enfermedad producida por parásitos del género Plasmodium, y algunos estudios científicos sugieren que pudo haberse transmitido al ser humano a través de los gorilas occidentales. Es la enfermedad de importancia entre las enfermedades debilitantes. Entre 700.000 y 2,7 millones de personas mueren al año por causa de la malaria, de los cuales más del 75% son niños en zonas endémicas de África. Asimismo, causa aproximadamente entre 400 y 900 casos de fiebre aguda al año en la población infantil en dichas zonas.</p>
+        <h2>Causas o síntomas</h2>
+        <p>Una infección por malaria suele caracterizarse por los siguientes signos y síntomas: </p>
+        <ul>
+            <li>Fiebre</li>
+            <li>Escalofríos</li>
+            <li>Dolores de cabeza</li>
+            <li>Náuseas y vómitos</li>
+            <li>Dolor y fatiga muscular</li>
+        </ul>
+        <p>Otros signos y síntomas pueden incluir</p>
+        <ul>
+            <li>Sudoración</li>
+            <li>Dolor abdominal o dolor de pecho</li>
+            <li>Tos</li>
+        </ul>
+        <h3>Prevención</h3>
+        <p>Al vivir o viajar a una zona donde la malaria es común, toma recaudos para evitar que te piquen. Los mosquitos estén más activos entre el atarcdecer y el amanecer. Para protegerse de las picaduras de mosquitos se ha de hacer lo siguiente:</p>
+        <ul>
+            <li>Cubrirse la piel</li>
+            <li>Aplicar repelentes de insectos en la piel y en la ropa</li>
+            <li>Dormir debajo de una red mosquitera</li>
+        </ul>
+        <p>En el siguiente mapa puedes buscar y seleccionar un centro médico de cabecera donde puedes recibir atención e información. En caso de que necesites fármacos puedes buscar farmacias cercanas.</p>
+        <div id='map' style='width: 1000px; height: 500px;'></div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoicmFtbmZvbm83MyIsImEiOiJjazcyNHp5dmEwOTFhM2t0ZHk2aHdlMWpuIn0.SV6D_zbGOdwLetxZi9NbdQ';
+            var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11'
+            });
+            
+            map.addControl(
+                new MapboxGeocoder({
+                accessToken: mapboxgl.accessToken,
+                mapboxgl: mapboxgl
+            })
+             );
+        </script>
+    </body>
+</html>

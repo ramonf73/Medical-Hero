@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<a href="home.html"><img src="ac39394a-3b7f-41fe-b301-720c92ab7653_200x200.png"></a>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="card_product.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+		<script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+        <link href="https://api.mapbox.com/geocoding/v5/mapbox.places">
+        <script src=mapbox_marker.js></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css">
+		<meta name="viewport" content="width=device-width"/>
+		<title>Coronavirus</title>
+	</head>
+	<body>
+		<h1>Coronavirus</h1>
+		<p>El coronavirus es una subfamilia de virus originaria del ARN monocatenario positivo perteneciente de la familia Coronaviridae. Se le llama así por la corona de puntas que se ve alrededor de la superficie del virus. El coronavirus puede infectar aves y mamíferos produciendo una serie de enfermedades respiratorias y digestivas; también pueden infectar al ser humano causando enfermedades que van desde resfriado común hasta enfermedades más graves como bronquitis, bronquiolitis, neumonía, el MERS Y el SARS.</p>
+		<h2>Causas y síntomas</h2>
+		<p>Los síntomas del coronavirus, sobretodo en seres humanos se han vuelto algo más frecuentes. Estos son los más se manifiestan:</p>
+		<ul>
+			<li>Fiebre</li>
+			<li>Tos seca</li>
+			<li>Cansancio</li>
+		</ul>
+		<p>Las que menos se manifiestan son las siguientes:</p>
+		<ul>
+			<li>Molestias y dolores</li>
+			<li>Dolores de garganta</li>
+			<li>Diarrea</li>
+			<li>Conjuntivitis</li>
+			<li>Dolores de cabeza</li>
+			<li>Pérdida del sentido del olfato o del gusto</li>
+			<li>Erupciones cutáneas</li>
+		</ul>
+		<h3>Prevención</h3>
+		<p>Sabiendo que los síntomas del coronavirus últimamente se da en seres humanos, existen diferentes formas de prevención del coronavirus:</p>
+		<ul>
+			<li>Lavarse las manos o utilizar un desinfectante de manos a base de alcohol</li>
+			<li>Mantener distancias de seguridad con personas que tosan o estornuden</li>
+			<li>Utilizar mascarilla cuando no sea posible mantener distanciamiento físico</li>
+			<li>No tocarse los ojos, la nariz o la boca</li>
+			<li>Al estornudar, cubrirse la nariz y la boca con el codo flexionado o con un pañuelo</li>
+			<li>En caso de no encontrarse bien, quedarse en casa</li>
+			<li>En caso de tener fiebre, tos o dificultad para respirar, buscar atención en algún centro médico cercano del municipio</li>
+		</ul>
+		<p>En este mapa puedes buscar un centro médico para recibir atención e información.</p>
+		<div id='map' style='width: 1000px; height: 500px;'></div>
+		<script>
+			mapboxgl.accessToken = 'pk.eyJ1IjoicmFtbmZvbm83MyIsImEiOiJjazcyNHp5dmEwOTFhM2t0ZHk2aHdlMWpuIn0.SV6D_zbGOdwLetxZi9NbdQ';
+			var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/mapbox/streets-v11'
+			});
+			
+			map.addControl(
+				new MapboxGeocoder({
+				accessToken: mapboxgl.accessToken,
+				mapboxgl: mapboxgl
+			})
+			);
+		</script>
+		<p>En el caso del coronavirus puedes también adquirir productos necesarios para protegerse. Están disponibles en cualquier supermercado o parafarmacia dependiendo del país o región </p>
+		<div class="card-product">
+			<img src="gelman.jpg">
+			<div class="card-product-infos">
+				<h2>Gel de manos</h2>
+				<p>Útil para desinfectar las manos en caso de no tener jabón</p>
+				<p>10 NIS</p>
+			</div>
+		</div>
+		<br>
+		<div class="card-product">
+			<img src="jabon en pastilla.jpg">
+			<div class="card-product-infos">
+				<h2>Jabón en pastilla</h2>
+				<p>Lavar las manos para mantenerlas limpias</p>
+				<p>8.00 NIS</p>
+			</div>
+		</div>
+		<br>
+		<div class="card-product">
+			<img src="mika-baumeister-uz_T7h8ds04-unsplash.jpg">
+			<div class="card-product-infos">
+				<h2>Mascarilla</h2>
+				<p>Protege la nariz y la boca de infecciones</p>
+				<p>10 NIS</p>
+			</div>
+		</div>
+		<br>
+		<div class="card-product">
+			<img src="erik-mclean-Sss9uGhSiPw-unsplash.jpg">
+			<div class="card-product-infos">
+				<h2>Papel higiénico</h2>
+				<p>Es útil para limpiarse tras hacer necesidades</p>
+				<p>6 NIS</p>
+			</div>
+		</div>
+	</body>
+</html>
