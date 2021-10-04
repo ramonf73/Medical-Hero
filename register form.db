@@ -1,0 +1,5 @@
+CREATE TABLE 'form' (
+'name' TEXT,
+'email' TEXT,
+'password', INTEGER
+);
