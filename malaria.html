@@ -4,12 +4,6 @@
         <meta charset="UTF-8">
         <a href="home.html"><img src="ac39394a-3b7f-41fe-b301-720c92ab7653_200x200.png"></a>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-        <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
-        <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
-        <link href="https://api.mapbox.com/geocoding/v5/mapbox.places">
-        <script src=mapbox_marker.js></script>
-        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
-        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css">
         <meta name="viewport" content="width=device-width"/>
         <link rel="stylesheet" href="style.css">
         <title>Malaria</title>
@@ -39,21 +33,5 @@
             <li>Aplicar repelentes de insectos en la piel y en la ropa</li>
             <li>Dormir debajo de una red mosquitera</li>
         </ul>
-        <p>En el siguiente mapa puedes buscar y seleccionar un centro médico de cabecera donde puedes recibir atención e información. En caso de que necesites fármacos puedes buscar farmacias cercanas.</p>
-        <div id='map' style='width: 1000px; height: 500px;'></div>
-        <script>
-            mapboxgl.accessToken = 'pk.eyJ1IjoicmFtbmZvbm83MyIsImEiOiJjazcyNHp5dmEwOTFhM2t0ZHk2aHdlMWpuIn0.SV6D_zbGOdwLetxZi9NbdQ';
-            var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11'
-            });
-            
-            map.addControl(
-                new MapboxGeocoder({
-                accessToken: mapboxgl.accessToken,
-                mapboxgl: mapboxgl
-            })
-             );
-        </script>
     </body>
 </html>
