@@ -29,30 +29,5 @@
             <li>Usar un preservativo de látex</li>
             <li>Evitar drogas recreativas</li>
         </ul>
-        <p>En el siguiente mapa puedes buscar un centro médico de cabecera para recibir atención e información. También puedes localizar farmacias en caso de encontrar fármacos.</p>
-        <div id='map' style='width: 1200px; height: 1000px;'></div>
-        <script>
-            mapboxgl.accessToken = 'pk.eyJ1IjoicmFtbmZvbm83MyIsImEiOiJjazcyNHp5dmEwOTFhM2t0ZHk2aHdlMWpuIn0.SV6D_zbGOdwLetxZi9NbdQ';
-            var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11'
-            });
-            
-            map.addControl(
-                new MapboxGeocoder({
-                accessToken: mapboxgl.accessToken,
-                mapboxgl: mapboxgl
-            })
-             );
-        </script>
-        <p>También puedes comprar uno de los siguientes elementos que puedes comprar en farmacias o lugares específicos.</p>
-        <div class="card-product">
-			<img src="reproductive-health-supplies-coalition-Wb-rLP27Gvo-unsplash.jpg">
-			<div class="card-product-infos">
-				<h2>Preservativos</h2>
-				<p>Previenen la entrada de semen y fluidos sanguíneos a diversos aparatos reporductores</p>
-				<p>10 NIS</p>
-			</div>
-		</div>
     </body>
 </html>

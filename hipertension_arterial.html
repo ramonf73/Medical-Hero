@@ -16,7 +16,7 @@
         <title>Hipertensión arterial</title>
     </head>
     <body>
-        <h1>¿Qué es la hipertensión arterial?</h1>
+        <h1>Hipertensión arterial</h1>
         <p>La hipertensión arterial es una enfermedad crónica caracterizada por un incremento continuo de las cifras de la presión sanguínea por arriba de los límites sobre los cuales aumenta el riesgo cardiovascular. La hipertensión es una enfermedad asintomática y fácil de detectar; sin embargo, cursa con complicaciones graves y letales si no se trata a tiempo.</p>
         <h2>Causas y consecuencias</h2>
         <p>Las causas de la hipertensión suelen ser desconocidas. 1 de cada 20 casos surge a consecuencia de una enfermedad subyacente o medicamentos. La insuficiencia renal crónica es la causa más común de la presión arterial alta, ya que los riñones no filtran los fluidos. Este exceso de líquido deriva en hipertensión.</p>
@@ -27,21 +27,5 @@
             <li>Llevar una dieta sana y practicar ejercicio puede ayudar a que la población general esté exenta de sufrir esta patología.</li>
             <li>Dejar de fumar, ya que el tabaco eleva la presión arterial.</li>
         </ul>
-        <p>En este mapa puedes buscar y selecionar un centro médico donde puedes recibir atención e información. En caso contrario puedes localizar también farmacias en caso de adquirir fármacos cercanos a tu localidad.</p>
-        <div id='map' style='width: 1000px; height: 500px;'></div>
-        <script>
-            mapboxgl.accessToken = 'pk.eyJ1IjoicmFtbmZvbm83MyIsImEiOiJjazcyNHp5dmEwOTFhM2t0ZHk2aHdlMWpuIn0.SV6D_zbGOdwLetxZi9NbdQ';
-            var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11'
-            });
-            
-            map.addControl(
-                new MapboxGeocoder({
-                accessToken: mapboxgl.accessToken,
-                mapboxgl: mapboxgl
-            })
-             );
-        </script>
     </body>
 </html>
